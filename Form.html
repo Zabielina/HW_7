@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформлення замовлення</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="mb-4">Оформлення замовлення</h1>
+    <form id="orderForm" action="/api/order" method="POST">
+      <div class="form-group">
+        <label for="inputPhoneNumber">Номер телефону</label>
+        <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Номер телефону" name="PhoneNumber" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFirstName">Ім'я</label>
+          <input type="text" class="form-control" id="inputFirstName" placeholder="Введіть ім'я" name="FirstName" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Прізвище</label>
+          <input type="text" class="form-control" id="inputLastName" placeholder="Введіть прізвище" name="LastName" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" style="background-color: red; border: none;">Відправити замовлення</button>
+    </form>
+    <div id="message" class="mt-4"></div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
